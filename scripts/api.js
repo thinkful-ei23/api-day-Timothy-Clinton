@@ -5,6 +5,7 @@ const api = (function() {
 
   let getItems = function(callback) {
     callback('api module works!');
+    $.getJSON(`${BASE_URL}/items`,callback);
   };
 
   return { getItems };
