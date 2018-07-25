@@ -28,10 +28,15 @@ const store = (function(){
     Object.assign(this.items[itemIndex], newData);
   };
 
+  const setError = function(errorMsg) {
+    this.error = errorMsg;
+  };
+
   return {
     items: [],
     hideCheckedItems: false,
     searchTerm: '',
+    error: null,
 
     addItem,
     findById,
@@ -39,6 +44,7 @@ const store = (function(){
     findAndUpdate,
     toggleCheckedFilter,
     setSearchTerm,
+    setError
   };
   
 }());
