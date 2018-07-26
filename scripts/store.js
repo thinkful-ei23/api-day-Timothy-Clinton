@@ -29,7 +29,7 @@ const store = (function(){
   };
 
   const setError = function(errorMsg) {
-    this.error = errorMsg;
+    this.error = JSON.parse(errorMsg.responseText).message;
   };
 
   return {
